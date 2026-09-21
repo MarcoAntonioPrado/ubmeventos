@@ -31,3 +31,16 @@
   font-weight: 600;
   margin: 0;
 }
+
+/* NOVO (Aula 6): o link para a página de detalhe */
+.evento-link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #1e2761;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.evento-link:hover {
+  text-decoration: underline;
+}

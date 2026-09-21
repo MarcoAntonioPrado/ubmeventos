@@ -83,6 +83,7 @@ function Home() {
           {eventosFiltrados.map((evento) => (
             <EventoCard
               key={evento.id}
+              id={evento.id}
               titulo={evento.titulo}
               tipo={evento.tipo}
               data={evento.data}

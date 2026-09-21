@@ -75,3 +75,56 @@
   font-size: 1.1rem;
   margin: 0;
 }
+
+/* NOVO (Aula 6): páginas de conteúdo — mesma moldura da listagem */
+.pagina,
+.detalhe {
+  padding: 32px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}
+
+.detalhe h2 {
+  margin: 12px 0 16px;
+}
+
+/* etiqueta-pílula do tipo (irmã da .evento-tipo do card) */
+.detalhe-tipo {
+  display: inline-block;
+  background: #1e2761;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.detalhe-info {
+  color: #475569;
+  margin: 0 0 8px;
+}
+
+.detalhe-vagas {
+  color: #1e2761;
+  font-weight: 600;
+  margin: 16px 0 0;
+}
+
+/* link de volta à lista (detalhe, erro e página não encontrada) */
+.voltar {
+  display: inline-block;
+  margin-bottom: 16px;
+  color: #1e2761;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.voltar:hover {
+  text-decoration: underline;
+}
+
+/* dentro dos avisos, o link vem abaixo do texto */
+.aviso .voltar {
+  margin: 12px 0 0;
+}
