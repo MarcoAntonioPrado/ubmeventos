@@ -11,7 +11,7 @@ function App() {
   return (
     <Routes>
       {/* a mãe não tem path: casa com tudo e desenha a moldura */}
-      <Route element={<Layout />}>
+      <Route element={<Layout />}> {/* Layout entra em cena uma única vez, como o element da rota-mãe */}
         <Route index element={<Home />} />                       {/* "/" */}
         <Route path="/eventos/:id" element={<EventoDetalhe />} />
         <Route path="/sobre" element={<Sobre />} />
