@@ -10,18 +10,18 @@ function App() {
   const [carregando, setCarregando] = useState(true);
   const [erro, setErro] = useState(false);
 
-  useEffect(() => {
-    async function carregarEventos() {
-      try {
-        const resposta = await axios.get("http://localhost:3001/eventos");
-        setEventos(resposta.data);
-      } catch {
-        setErro(true);
-      } finally {
-        setCarregando(false);
-      }
+  async function carregarEventos() {
+    try {
+      const resposta = await axios.get("http://localhost:3001/eventos");
+      setEventos(resposta.data);
+    } catch {
+      setErro(true);
+    } finally {
+      setCarregando(false);
     }
+  }
 
+  useEffect(() => {
     carregarEventos();
   }, []);
 
@@ -36,7 +36,18 @@ function App() {
   if (erro) {
     return (
       <p className="aviso">
-        Não foi possível carregar os eventos. Verifique se a API está no ar.
+        Não foi possível carregar os eventos. Verifique se a API está no ar.{" "}
+        <button
+          type="button"
+          className="busca-limpar"
+          onClick={() => {
+            setErro(false);
+            setCarregando(true);
+            carregarEventos();
+          }}
+        >
+          Tentar novamente
+        </button>
       </p>
     );
   }
