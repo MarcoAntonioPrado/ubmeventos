@@ -128,3 +128,25 @@
 .aviso .voltar {
   margin: 12px 0 0;
 }
+
+/* NOVO (Aula 6): barra de navegação do Layout */
+.app-nav {
+  display: flex;
+  gap: 24px;
+  padding: 12px 32px;
+  background: #161c42;          /* navy mais escuro que o cabeçalho */
+}
+
+.app-nav a {
+  color: #cadcfc;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 0;
+  border-bottom: 2px solid transparent;   /* reserva o espaço do sublinhado */
+}
+
+/* a classe active é posta pelo NavLink quando a URL casa com o to */
+.app-nav a.active {
+  color: #fff;
+  border-bottom-color: #fff;
+}

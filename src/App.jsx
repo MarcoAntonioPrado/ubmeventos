@@ -1,14 +1,22 @@
-// src/App.jsx — o mapa: cada URL, um componente
+// src/App.jsx — forma final: rota-mãe com o Layout, filhas no Outlet
 import { Routes, Route } from "react-router";
+import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import EventoDetalhe from "./pages/EventoDetalhe";
-import "./App.css";   // o CSS de página continua importado aqui
+import Sobre from "./pages/Sobre";
+import NaoEncontrado from "./pages/NaoEncontrado";
+import "./App.css";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/eventos/:id" element={<EventoDetalhe />} />   {/* :id é variável */}
+      {/* a mãe não tem path: casa com tudo e desenha a moldura */}
+      <Route element={<Layout />}>
+        <Route index element={<Home />} />                       {/* "/" */}
+        <Route path="/eventos/:id" element={<EventoDetalhe />} />
+        <Route path="/sobre" element={<Sobre />} />
+        <Route path="*" element={<NaoEncontrado />} />           {/* o "senão" */}
+      </Route>
     </Routes>
   );
 }
