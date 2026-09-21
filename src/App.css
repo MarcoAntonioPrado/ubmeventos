@@ -182,3 +182,23 @@
     border-right-color: var(--border);
   }
 }
+
+.app-header {
+  background: #1e2761;
+  color: #fff;
+  padding: 24px 32px;
+}
+
+.app-header p {
+  color: #cadcfc;
+  margin: 4px 0 0;
+}
+
+.lista-eventos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 32px;
+  background: #f5f7fb;
+  min-height: 100vh;
+}

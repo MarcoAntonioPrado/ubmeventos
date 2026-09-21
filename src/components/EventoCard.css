@@ -1,0 +1,33 @@
+.evento-card {
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+.evento-tipo {
+  display: inline-block;
+  background: #1e2761;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 999px;
+}
+
+.evento-card h3 {
+  margin: 12px 0 6px;
+}
+
+.evento-info {
+  color: #475569;
+  margin: 0 0 8px;
+}
+
+.evento-vagas {
+  color: #1e2761;
+  font-weight: 600;
+  margin: 0;
+}
