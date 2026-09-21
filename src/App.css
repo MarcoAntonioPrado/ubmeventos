@@ -202,3 +202,25 @@
   background: #f5f7fb;
   min-height: 100vh;
 }
+
+.busca {
+  padding: 24px 32px 0;
+  background: #f5f7fb;
+}
+
+.busca input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 16px;
+  font-size: 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+}
+
+.lista-vazia {
+  padding: 48px 32px;
+  background: #f5f7fb;
+  min-height: 100vh;
+  color: #475569;
+  font-size: 1.1rem;
+}
