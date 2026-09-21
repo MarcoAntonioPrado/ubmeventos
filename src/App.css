@@ -1,11 +1,11 @@
 .app-header {
-  background: #1e2761;
+  background: #155e63;
   color: #fff;
   padding: 24px 32px;
 }
 
 .app-header p {
-  color: #cadcfc;
+  color: #d0eeea;
   margin: 4px 0 0;
 }
 
@@ -14,7 +14,7 @@
   align-items: center;
   gap: 12px;
   padding: 24px 32px 0;
-  background: #f5f7fb;
+  background: #f3f7f6;
 }
 
 .busca input {
@@ -32,15 +32,15 @@
   font-size: 1rem;
   font-family: inherit;
   color: #fff;
-  background: #1e2761;
-  border: 1px solid #1e2761;
+  background: #155e63;
+  border: 1px solid #155e63;
   border-radius: 8px;
   cursor: pointer;
 }
 
 .busca-limpar:hover {
-  background: #2c3a8c;
-  border-color: #2c3a8c;
+  background: #207b80;
+  border-color: #207b80;
 }
 
 .contador {
@@ -55,13 +55,13 @@
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 20px;
   padding: 32px;
-  background: #f5f7fb;
+  background: #f3f7f6;
   min-height: 100vh;
 }
 
 .lista-vazia {
   padding: 48px 32px;
-  background: #f5f7fb;
+  background: #f3f7f6;
   min-height: 100vh;
   color: #475569;
   font-size: 1.1rem;
@@ -69,7 +69,7 @@
 
 .aviso {
   padding: 48px 32px;
-  background: #f5f7fb;
+  background: #f3f7f6;
   min-height: 100vh;
   color: #475569;
   font-size: 1.1rem;
@@ -80,7 +80,7 @@
 .pagina,
 .detalhe {
   padding: 32px;
-  background: #f5f7fb;
+  background: #f3f7f6;
   min-height: 100vh;
 }
 
@@ -91,7 +91,7 @@
 /* etiqueta-pílula do tipo (irmã da .evento-tipo do card) */
 .detalhe-tipo {
   display: inline-block;
-  background: #1e2761;
+  background: #155e63;
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -106,7 +106,7 @@
 }
 
 .detalhe-vagas {
-  color: #1e2761;
+  color: #155e63;
   font-weight: 600;
   margin: 16px 0 0;
 }
@@ -115,7 +115,7 @@
 .voltar {
   display: inline-block;
   margin-bottom: 16px;
-  color: #1e2761;
+  color: #155e63;
   font-weight: 600;
   text-decoration: none;
 }
@@ -134,11 +134,11 @@
   display: flex;
   gap: 24px;
   padding: 12px 32px;
-  background: #161c42;          /* navy mais escuro que o cabeçalho */
+  background: #103f43;          /* navy mais escuro que o cabeçalho */
 }
 
 .app-nav a {
-  color: #cadcfc;
+  color: #d0eeea;
   text-decoration: none;
   font-weight: 600;
   padding: 6px 0;
@@ -149,4 +149,46 @@
 .app-nav a.active {
   color: #fff;
   border-bottom-color: #fff;
+}
+
+/* Identificação do aluno e pequenos ajustes de apresentação. */
+.app-header h1 {
+  color: #fff;
+  margin: 12px 0;
+}
+
+.app-header .aluno {
+  margin-top: 16px;
+  font-size: 0.85rem;
+}
+
+.sobre-aluno {
+  margin-top: 20px;
+}
+
+.lista-eventos {
+  align-content: start;
+}
+
+@media (max-width: 600px) {
+  .app-header,
+  .app-nav,
+  .pagina,
+  .detalhe,
+  .lista-eventos {
+    padding: 20px;
+  }
+
+  .busca {
+    padding: 20px 20px 0;
+    flex-wrap: wrap;
+  }
+
+  .busca input {
+    min-width: 0;
+  }
+
+  .lista-eventos {
+    grid-template-columns: 1fr;
+  }
 }

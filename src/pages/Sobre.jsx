@@ -8,6 +8,10 @@ function Sobre() {
         construído no Laboratório de Programação Front End com React, Vite,
         axios e React Router. Os dados são servidos por uma API REST.
       </p>
+      <p className="sobre-aluno">
+        Projeto de Marco Antonio Prado, aluno de Engenharia de Software,
+        desenvolvido aula a aula com base no código do professor Rubens Guimarães.
+      </p>
     </section>
   );
 }
