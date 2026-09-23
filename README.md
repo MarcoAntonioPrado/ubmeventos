@@ -1,15 +1,67 @@
-# UBM Eventos — Marco Antonio Prado
+# UBM Eventos — Web
 
-Projeto da disciplina Laboratório de Programação Front End, de Engenharia de Software / UBM.
-Baseado no código de aula do professor Rubens Guimarães: https://github.com/rubensguimaraes/ubm-eventos-web (commit 525426c).
+Portal de eventos acadêmicos. Projeto integrador da disciplina **Laboratório de
+Programação Front End** — 6º período, Engenharia de Software / UBM.
+Repositório de referência do docente (Prof. Dr. Rubens Guimarães), evoluído
+aula a aula: cada entrega é marcada com a tag `aula-NN`.
 
-Mantém a estrutura de componentes e páginas do professor, com listagem de eventos, busca sincronizada com a URL, detalhes, página Sobre e tratamento de erros. Personalização de cores e identificação do aluno.
+**Stack:** React + Vite (JavaScript). Fases futuras: Node.js/Express +
+PostgreSQL (API) e Next.js.
 
-## Executar
+## Executar — Windows / PowerShell
 
-Instale as dependências com `npm install`.
+```powershell
+# primeira vez
+Set-Location "D:\projects"
+git clone https://github.com/rubensguimaraes/ubm-eventos-web.git
+Set-Location "D:\projects\ubm-eventos-web"
+npm install
 
-Em um terminal, execute `npm run api` para iniciar a API na porta 3001.
-Em outro, execute `npm run dev` e abra o endereço indicado pelo Vite.
+# rodar
+npm run dev    # ➜ http://localhost:5173
+```
 
-Para verificar o projeto: `npm run lint` e `npm run build`.
+Encerrar com `Ctrl + C`.
+
+## Executar — WSL / Linux
+
+```bash
+cd /mnt/d/projects/ubm-eventos-web
+npm install          # se o node_modules atual veio do Windows
+npm run dev -- --host
+```
+
+## Regra de ouro entre Windows e WSL
+
+Nunca compartilhe o mesmo `node_modules` entre os dois sistemas. Ao trocar de
+lado: apague `node_modules` e rode `npm install`. O `package-lock.json`
+garante reconstrução idêntica — versionamos a receita, nunca os pacotes.
+
+## Ciclo de trabalho
+
+```powershell
+git pull
+# editar em src/
+npm run dev          # conferir (HMR)
+git add .
+git commit -m "feat: descrição no padrão da disciplina"
+git push
+# ao fechar uma aula:
+git tag aula-NN && git push --tags
+```
+
+Convenção de commits: `feat:` `fix:` `style:` `chore:` `docs:`.
+
+## Solução de problemas
+
+| Sintoma | Solução |
+|---|---|
+| `Port 5173 is in use` | Encerrar o `npm run dev` anterior (ou usar a porta alternativa que o Vite indicar) |
+| Tela branca após trocar de máquina | `node_modules` do sistema errado — aplicar a regra de ouro |
+| `npm.ps1 cannot be loaded` | `Set-ExecutionPolicy RemoteSigned` (PowerShell como Administrador) |
+
+## Marcos
+
+| Tag | Conteúdo |
+|---|---|
+| `aula-02` | Projeto criado com Vite; primeira tela (App.jsx) |

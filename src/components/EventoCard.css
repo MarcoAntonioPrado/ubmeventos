@@ -8,7 +8,7 @@
 
 .evento-tipo {
   display: inline-block;
-  background: #155e63;
+  background: #1e2761;
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -27,7 +27,7 @@
 }
 
 .evento-vagas {
-  color: #155e63;
+  color: #1e2761;
   font-weight: 600;
   margin: 0;
 }
@@ -36,7 +36,7 @@
 .evento-link {
   display: inline-block;
   margin-top: 12px;
-  color: #155e63;
+  color: #1e2761;
   font-weight: 600;
   text-decoration: none;
 }
@@ -44,4 +44,3 @@
 .evento-link:hover {
   text-decoration: underline;
 }
-
